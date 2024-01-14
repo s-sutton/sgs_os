@@ -1,9 +1,9 @@
 # sgs_os
 This is a modifiable showcase. It is not meant for practical use.
 
-<h2>About</h2>
+<h2>Project Overview</h2>
 
-This is a project that aims to supplement an Arch and Nix-influenced [Linux From Scratch]() with [Write Your Own Operating System]() in order to go more in-depth into the kernel, which is only briefly covered in section 10 of LFS. For the sake of starting lower and building up, I will be starting with WYOOS and then moving on to LFS to fill in the gaps.
+This is a project that aims to supplement an Arch and Nix-influenced [Linux From Scratch](https://www.linuxfromscratch.org/lfs/read.html) with [Write Your Own Operating System](https://youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M&feature=shared) in order to go more in-depth into the kernel, which is only briefly covered in section 10 of LFS. For the sake of starting lower and building up, I will be starting with WYOOS and then moving on to LFS to fill in the gaps.
 
 There are some limitations to this approach. For instance, with WYOOS+LFS alone, there is no custom bootloader so it still cannot be said to be a complete OS. LFS mostly focuses on utilities and can be helpful for creating Linux distros, but creating a Linux-compatible OS from scratch means essentially writing an entire kernel.
 
@@ -23,8 +23,8 @@ Right now, I am only committed to combining WYOOS with LFS. This project is also
 
 This is a rough outline and subject to revision.
 
-1. Write Your Own Operating System
-2. Linux From Scratch (+ Arch/Nix Utils)
+1. [Write Your Own Operating System](https://youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M&feature=shared)
+2. [Linux From Scratch](https://www.linuxfromscratch.org/lfs/read.html) (+ Arch/Nix Utils)
 3. Bootloader (maybe)
 4. "Other kernel stuff" (I will define this in better detail if/when I get there)
 
