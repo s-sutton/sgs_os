@@ -1,7 +1,8 @@
 #These params are used because CPUs tend to start in 32-bit compatibility mode, so we are using x86 architecture rather than x64
-#The i386 was one of the first chips to use a 32-bit version of the x86 architecture, and melf is a reference to a Linux executable file format
-GPPPARAMS = -m32
+#The fno options here tell the compiler not to assume that these features are already installed and to not try to link to them, because the kernel starts from scratch
+GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fnobuiltin -fno-rtti -fno-exceptions -fno-leading-underscore
 ASPARAMS = --32
+#The i386 was one of the first chips to use a 32-bit version of the x86 architecture, and melf is a reference to a Linux executable file format
 LDPARAMS = -melf_i386
 
 #This stores both object files into a single variable to be called by the linker
