@@ -8,10 +8,15 @@ void printf(char* str) //accepts a a string of characters, this is a custom-made
 }
 
 
-
+typedef void (*constructor)(); //sets the constructors to be initialized
 //Extern "C" tells the compiler to not change the name of this function, that way it can be referenced by the Assembly code
-extern "C" constructor start_ctors; //for the linker
+extern "C" constructor start_ctors; //essentially signalling the beginning of a space that can be copied to by the linker
 extern "C" constructor end_ctors;
+extern "C" void callConstructors() //calls and initializes all of the data written within the space between start_ctors and end_ctors
+{
+  for(constructor* i = &start_ctors; i != end_ctors; i++)
+    (*i)();
+}
 
 extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber, ) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
 {
