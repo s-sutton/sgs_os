@@ -7,7 +7,8 @@ void printf(char* str) //accepts a a string of characters, this is a custom-made
     VideoMemory[i] = (VideoMemory[i] & 0xFF00) | str[i]; //sends the string to the screen, uses the high byte for white text on black background, although this seems like the wrong format?
 }
 
-void kernelMain(void* multiboot_structure, unsigned int magicnumber, ) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
+//Extern "C" tells the compiler to not change the name of this function, that way it can be referenced by the Assembly code
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber, ) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
 {
   printf("Hewwo wowld owo");
 
