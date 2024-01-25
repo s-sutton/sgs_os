@@ -32,7 +32,7 @@ The .iso will also be deployed in this repo, mostly for my own convenience and a
 
 <h2>How to Use</h2>
 
-This is where I would put my instructions for how to run the operating system, if I had any. Check back later.
+In its current state, following [this video](https://www.youtube.com/watch?v=ZiHtuBnVrx4) should work.
 
 <h2>Additional Notes</h2>
 
