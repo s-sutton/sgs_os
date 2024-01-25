@@ -12,8 +12,9 @@ This is the magic number that GRUB looks for when searching for bootable kernels
 
 /* This declares the following section as code rather than data or bss (variables) */
 .section .text
-/* This calls the C++ function, which will only work when this is linked with the C++ script */
+/* This calls the C++ functions, which will only work when this is linked with the C++ script and the C++ script overrides the compiler's function renaming */
 .extern kernelMain
+.extern callConstructors
 /* In WYOOS, he calls the main function "loader" rather than "_start," but I'm going to use the more expected syntax here */ 
 .global _start
 /* He does not do this in WYOOS, either, but this will be much less of a headache for me since I'm getting used to this format for Assembly */
@@ -22,7 +23,9 @@ This is the magic number that GRUB looks for when searching for bootable kernels
 _start:
 /* This part is in reverse from how he coded it, because I'm moving the kernel_stack into esp so it has to be done in this order, according to this format */
   mov esp, kernel_stack
-/* Makes space for the multiboot structure created by the bootloader (different from above multiboot section); accumulator stores the location of the multiboot structure */
+/* This calls the callConstructors function from the C++ script in order to construct the multiboot structure array */
+  call callConstructors
+/* Makes space for the multiboot structure created by the bootloader; accumulator stores the location of the multiboot structure */
   push eax
 /* Bootloader's multiboot structure stores the magic number in the ebx register, so push that, too */
   push ebx
