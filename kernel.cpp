@@ -1,4 +1,4 @@
-void kernelMain()
+void kernelMain(void* multiboot_structure, unsigned int magicnumber, ) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
 {
   printf("Hewwo wowld owo");
 
