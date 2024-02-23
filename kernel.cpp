@@ -18,7 +18,7 @@ extern "C" void callConstructors() //calls and initializes all of the data writt
     (*i)();
 }
 
-extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason? Probably to store it in memory.
 {
   printf("Hewwo wowld owo");
 
