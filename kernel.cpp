@@ -14,11 +14,11 @@ extern "C" constructor start_ctors; //essentially signalling the beginning of a 
 extern "C" constructor end_ctors;
 extern "C" void callConstructors() //calls and initializes all of the data written within the space between start_ctors and end_ctors
 {
-  for(constructor* i = &start_ctors; i != end_ctors; i++)
+  for(constructor* i = &start_ctors; i != &end_ctors; i++)
     (*i)();
 }
 
-extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber, ) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber) //Accepts the multiboot_structure from the Assembly file as an argument, and also the magicnumber for... some reason?
 {
   printf("Hewwo wowld owo");
 
