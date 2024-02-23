@@ -22,9 +22,17 @@ The .iso will also be deployed in this repo, mostly for my own convenience and a
 
 <h2>How to Use</h2>
 
-git clone https://github.com/s-sutton/sgs_os/
-cd sgs_os
-make kernel.iso
+Clone the git repo to your working directory:
+
+`git clone https://github.com/s-sutton/sgs_os/`
+
+Enter the generated directory:
+
+`cd sgs_os`
+
+Make the iso file:
+
+`make kernel.iso`
 
 Then you can use the .iso on a bootable medium or a VM.
 
