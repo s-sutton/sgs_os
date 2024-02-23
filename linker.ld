@@ -6,14 +6,14 @@ SECTIONS
 {
  . = 0x0100000
 
- .text :
+ .text : 
   {
    *(.multiboot)
    *(.text*)
    *(.rodata)
   }
 
- .data :
+ .data : 
   {
    start_ctors = .;
    KEEP(*( .init_array));
@@ -21,12 +21,12 @@ SECTIONS
    end_ctors = .;
   }
 
- .bss :
+ .bss : 
  {
   *(.bss)
  }
 
- /DISCARD/ :
+ /DISCARD/ : 
  {
   *(.fini_array*)
   *(.comment)
