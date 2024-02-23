@@ -22,6 +22,23 @@ objects = loader.o kernel.o
 mykernel.bin: linker.ld $(objects)
   ld $(LDPARAMS) -T $< -o $@ $(objects)
 
-#This literally just copies the binary to the boot directory
+#This literally just copies the binary to the boot directory. I don't fully understand how/why this is called by the next section.
 install: mykernel.bin
   sudo cp $< /boot/mykernel.bin
+
+#Creates iso and its directories. Also creates grub.cfg
+#NOTE TO SELF: This might be important when starting LFS
+mykernal.iso: mykernal.bin
+  mkdir iso
+  mkdir iso/boot
+  mkdir iso/boot/grub
+  cp $< iso/boot
+  echo 'set timeout=0' >> iso/boot/grub/grub.cfg
+  echo 'set default=0' >> iso/boot/grub/grub.cfg
+  echo '' >> iso/boot/grub/grub.cfg
+  echo 'menuentry "My Operating System" {' >> iso/boot/grub/grub.cfg
+  echo '  multiboot /boot/mykernel.bin' >> iso/boot/grub/grub.cfg
+  echo '  boot' >> iso/boot/grub/grub.cfg
+  echo '}' >> iso/boot/grub/grub.cfg
+  grub-mkrescue --output=$@ iso
+#  rm -rf iso
