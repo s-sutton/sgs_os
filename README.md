@@ -22,6 +22,10 @@ The .iso will also be deployed in this repo, mostly for my own convenience and a
 
 <h2>How to Use</h2>
 
+Prequisite packages to make from source:
+
+mtools, gcc, as, xorisso, etc.
+
 Clone the git repo to your working directory:
 
 `git clone https://github.com/s-sutton/sgs_os/`
