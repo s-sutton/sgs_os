@@ -2,7 +2,7 @@
 This is the magic number that GRUB looks for when searching for bootable kernels */
 .set MAGIC, 0x1badb002
 .set FLAGS, (1<<0 | 1<<1)
-.set CHECKSUM -(MAGIC + FLAGS)
+.set CHECKSUM, -(MAGIC + FLAGS)
 
 /* This creates the actual multiboot data segment from the above variables and, since it's set before everything else, tells GRUB where the very beginning of the kernel program is */
 .section .multiboot
