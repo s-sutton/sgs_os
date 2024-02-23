@@ -11,7 +11,7 @@ objects = loader.o kernel.o
 #This creates an object file from a C++ file, using the g++ utility, $< is input file and $@ is output file
 #The C++ script will contain most of the kernel code, hence why it's called "kernel"
 %.o: %.cpp
-  g++ $(GPPPARAMS) -o $@ -c $<
+  g++ $(GPPPARAMS) -c -o $@ $<
 
 #This creates an object file from an Assembly script
 #The assembly script is used to set the stack pointer so that C++ can run without crashing, since C++ ordinarily assumes that the stack pointer is already set, hence why it's called "loader"
