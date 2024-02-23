@@ -38,6 +38,8 @@ Make the iso file:
 
 `make kernel.iso`
 
+Alternatively, you can download the latest .iso from the [releases](https://github.com/s-sutton/sgs_os/releases) menu.
+
 Then you can use the .iso on a bootable medium or a VM.
 
 <h2>Additional Notes</h2>
