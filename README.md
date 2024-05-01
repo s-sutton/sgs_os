@@ -7,7 +7,7 @@ This is a project that aims to supplement an Arch and Nix-influenced [Linux From
 
 The main point of this project is to simply gain familiarity with how operating systems work at their most foundational level. A side benefit is that it helps me gain familiarity with programming a more complex project, but that isn't the main purpose. I'm a hacker, not an OS dev, and my interest is mainly in understanding the moving parts so that I can exploit them better in other operating systems.
 
-Right now, I am only committed to combining WYOOS with LFS. This project is also done in my free time, so consistent updates might not be possible since this is one of my lowest priorities. Anything beyond WYOOS and LFS is superfluous, and might not happen at all.
+Right now, I am only committed to combining WYOOS with LFS, perhaps with reference to the [little book](https://littleosbook.github.io/). This project is also done in my free time, so consistent updates might not be possible since this is one of my lowest priorities. Anything beyond WYOOS and LFS is superfluous, and might not happen at all.
 
 <h2>Timeline</h2>
 
@@ -15,7 +15,7 @@ This is a rough outline and subject to revision.
 
 1. [Write Your Own Operating System](https://youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M&feature=shared)
 2. [Linux From Scratch](https://www.linuxfromscratch.org/lfs/read.html) (+ Arch/Nix Utils)
-3. Bootloader (maybe)
+3. Bootloader (maybe) 
 4. "Other kernel stuff" (I will define this in better detail if/when I get there)
 
 The .iso will also be deployed in this repo, mostly for my own convenience and as a formality.
